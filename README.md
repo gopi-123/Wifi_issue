@@ -1,4 +1,4 @@
-# Wifi Adapter Issue solving in ubuntu and Windows
+# Wifi Adapter Issue solving in ubuntu and Windows  (HP Laptop)
 sample testing github
 
 
@@ -10,7 +10,7 @@ Seemingly after last Windows update (though I'm not sure) I cannot see my own wi
 
 I can see it and connect to my wireless network with my Work laptop. My partner can see it and connect to it with her two laptops and her smartphone.
 
-I checked the **wireless network adapter (Realtek RTL8723AE Wireless LAN 802.11n PCI-E NIC)**
+I checked the **wireless network adapter (Realtek RTL8723AE Wireless LAN 802.11n PCI-E NIC)** 
 
 Problem link:
 https://answers.microsoft.com/en-us/windows/forum/all/cannot-see-own-wireless-network-but-can-see-others/ae835a08-59a6-4aaa-830c-87a1dab5761b?page=3
