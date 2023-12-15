@@ -4,6 +4,9 @@ sample testing github
 Issue with **Wireleass LAN Adapter -- "Realtek RTL8723BE 802.11 bgn Wi-Fi Adapter"**
 
  Version: "Realtek **RTL8723BE"** 802.11 bgn Wi-Fi Adapter
+
+ https://www.realtek.com/en/component/zoo/category/rtl8192ee-software
+ 
 Problem:
 Cannot see own wireless network but can see others around me
 
