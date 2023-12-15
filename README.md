@@ -15,6 +15,7 @@ I checked the **wireless network adapter (Realtek RTL8723AE Wireless LAN 802.11n
 Problem link:
 https://answers.microsoft.com/en-us/windows/forum/all/cannot-see-own-wireless-network-but-can-see-others/ae835a08-59a6-4aaa-830c-87a1dab5761b?page=3
 
+https://askubuntu.com/questions/645220/unable-to-connect-wifi-ubuntu-14-04-lts-hp-pavilion-network-driver-rtl8723be
 
 
 ** Solve wifi issues **:
