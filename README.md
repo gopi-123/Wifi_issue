@@ -21,7 +21,8 @@ https://askubuntu.com/questions/645220/unable-to-connect-wifi-ubuntu-14-04-lts-h
 ** Solve wifi issues **:
 
 Best thing is to:
- 1) To me the answer is get a new wireless card or a **USB wireless connector**.  or **USB Wi-Fi Adapter**  oer **Wireless USB adapter**
+ 1) To me the answer is get a new wireless card or a **USB wireless connector**.  or **USB Wi-Fi Adapter**  oer **Wireless USB adapter**  , example device link which is compatible with Windows, Linux & MAC OS : https://www.amazon.de/-/en/TP-Link-TL-WN823N-300Mbit-installation-compatible/dp/B0088TKTY2/ref=sr_1_3?crid=3RRKYLOJQ7CKF&keywords=USB+Wi-Fi+Adapter+for+linux+and+windows&qid=1702601553&refinements=p_72%3A419117031&rnid=419116031&sprefix=usb+wi-fi+adapter+for+linux+and+windows%2Caps%2C71&sr=8-3
+    
  2)  --updating the driver in device manager --**Intel driver to the Microsoft driver
    Uninstall / reinstall the wi-fi adapter by following this procedure:            
             https://www.drivereasy.com/knowledge/how-to-reinstall-wi-fi-driver-on-windows-10-easily/ 
