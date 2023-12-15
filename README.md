@@ -6,6 +6,9 @@ Issue with **Wireleass LAN Adapter -- "Realtek RTL8723BE 802.11 bgn Wi-Fi Adapte
  Version: "Realtek **RTL8723BE"** 802.11 bgn Wi-Fi Adapter
 
  https://www.realtek.com/en/component/zoo/category/rtl8192ee-software
+
+ https://support.hp.com/in-en/drivers/laptops
+ 
  
 Problem:
 Cannot see own wireless network but can see others around me
