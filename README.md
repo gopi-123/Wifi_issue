@@ -1,8 +1,9 @@
 # Wifi Adapter Issue solving in ubuntu and Windows  (HP Laptop) -- 
 sample testing github
 
-**Wireleass LAN Adapter -- Realtek RTL8723BE 802.11 bgn Wi-Fi Adapter**
+Issue with **Wireleass LAN Adapter -- "Realtek RTL8723BE 802.11 bgn Wi-Fi Adapter"**
 
+ Version: "Realtek **RTL8723BE"** 802.11 bgn Wi-Fi Adapter
 Problem:
 Cannot see own wireless network but can see others around me
 
