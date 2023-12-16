@@ -156,3 +156,86 @@ Login to the router via another device, go to the wireless settings page and cha
        (7) Click Next**
 
 
+
+
+#####
+https://www.amazon.nl/-/en/TP-LINK-MU-MIMO-Wireless-Supports-T3U/dp/B07M69276N/ref=cm_cr_arp_d_product_top?ie=UTF8&th=1
+
+Instructions for Linux / Debian
+###
+Execute the command "lsusb" in a shell (command line) or "sudo dmesg":lsusb
+# On a Raspberry PI with OpenWRT installed (OpenWrt 22.03.5, r20134-5f15225c1e) I was shown the following on the shell:Bus 001 Device 014: ID 2357:0109 Realtek 802.11n NIC
+# It is important to name the ID "2357:
+
+0109" because it is a Realtek chip RTL8192EU which is installed in the USB WLAN adapter TP-Link TL-WN823N!
+
+#Auf a "normal" PC (with Intel I5 processor) I was shown the following line (the name of the ID "2357:0109" is also important here, because it is then a Realtek chip RTL8192EU)
+Bus 001 Device 006: ID 2357:0109 TP-Link TL-WN823N v2/v3 [Realtek RTL8192EU]
+
+###
+
+# Tested under:# Debian 12# Linux kernel in version 6.1.0-12-amd64
+
+# Note: it may also work with earlier Debian versions,
+but I haven't checked!
+###
+
+If it works for you (which may well be the case in a few weeks or months if there are newer Linux kernels), then you don't need to do anything else and can ignore this part of the guide!
+
+Note2: you may need to install the net-tools package to make ifconfig available on your system: sudo apt update & sudo apt install net-tools -y
+
+# to The best way to install the external driver is to follow the instructions below, which are basically an excerpt of the file README.md (see below)
+# Now run the following commands on the "normal" PC:
+sudo apt update
+sudo apt install linux-headers-generic build-essential dkms git net-tools
+
+# Download
+the source code git clone https://github.com/clnhub/rtl8192eu-linux
+
+# Change
+to directory cd rtl8192eu-linux# read the readme file if there are problems or if you are using another Linux distribution
+less README.md
+
+# Perform automated installation (execute the following command from the directory rtl8192eu-linux
+
+, if necessary switch to the directory, if not already done as described above!)
+./install_wifi.sh
+
+#Zum uninstall run the following file:
+./uninstall_wifi.sh
+
+###
+
+Short conclusion:
+With a little effort (see below) anyone who knows something about Linux and can open a shell can put the USB WLAN adapter into operation.
+I didn't test the adapter on Windows because it's used on Linux (OpenWrt and Rapsberry PI). Here I assume that it can be used on Windows 10 without any problems.
+
+Link
+https://www.amazon.nl/-/en/TP-LINK-MU-MIMO-Wireless-Supports-T3U/dp/B07M69276N/ref=cm_cr_arp_d_product_top?ie=UTF8&th=1
+
+
+# Important note: If the OpenWRT does not have a connection to the Internet, then you should connect the Raspberry PI to the router via a network cable so that a connection to the Internet can be established and the software packages can be downloaded!
+
+# openwrt installation for Raspberry PI2b V1.1 and higher (possibly also suitable for PI1, but not tested by me so far)
+# Log in via the web interface of the OpenWrt/PI system and navigate to the menu item Software: System -> Software
+# There the button "Update lists..." Click
+# then under "Filter:" enter and install the following package names individually:
+kmod-usb2 rtl8192eu-firmware
+,
+kmod-rtl8xxxu
+, net-tools (this is optional and serves to detect if the WLAN adapter has been correctly detected by the system. This can also be omitted if necessary, but then the command "ifconfig" will not work!)
+
+# or alternatively run the following command from a console:
+opkg update
+opkg install kmod-usb2 rtl8192eu-firmware kmod-rtl8xxxu net-tools
+
+After that, a corresponding "radio" device should be found under "Network" -> "Wireless" (reboot the PI if necessary).
+Alternatively, you can run the ip a or ifconfig -a command on the console. A device with wlanX should then appear there (X should then have a number of 0 - ... e.g. wlan0)
+
+The connection under a Linux PC seems to be stable and correspondingly fast.
+In a quick test for a router in the next room, the ping statistics for 101 packets showed the following result (signal strength to the router was about 80-94% depending on how the USB adapter was aligned):
+101 packets transmitted, 101 received, 0% packet loss, time 100134ms
+rtt min/avg/max/mdev = 1,965/3,088/11,641/1,424 ms
+
+With these settings, I had been able topter on Linux. A long-term test will show how well it performs and if necessary I will note this again in the review.
+
