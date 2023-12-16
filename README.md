@@ -41,6 +41,7 @@ Best thing is to:
 
 3) https://answers.microsoft.com/en-us/windows/forum/all/cannot-see-own-wireless-network-but-can-see-others/ae835a08-59a6-4aaa-830c-87a1dab5761b?page=3
 
+4) The solution to the first problem is to go to device manager - network adapters - TP-Link...**Adapter - Properties - Power Management, and turning off the "allow this device to be turned off to save power"**or whatever similar. I have no idea why such a braindead feature is featured on windows, why would I ever want to turn off my little USB internet dongle to save power???
 
 3) I turned on 802-11d and "lo
 4) I turned on 802.11d in the network adapter.
