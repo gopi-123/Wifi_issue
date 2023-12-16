@@ -29,9 +29,33 @@ https://askubuntu.com/questions/645220/unable-to-connect-wifi-ubuntu-14-04-lts-h
 ** Solve wifi issues **:
 
 Best thing is to:
- 1) To me the answer is get a new wireless card or a **USB wireless connector**.  or **USB Wi-Fi Adapter**  oer **Wireless USB adapter**  , example device link which is compatible with Windows, Linux & MAC OS : https://www.amazon.de/-/en/TP-Link-TL-WN823N-300Mbit-installation-compatible/dp/B0088TKTY2/ref=sr_1_3?crid=3RRKYLOJQ7CKF&keywords=USB+Wi-Fi+Adapter+for+linux+and+windows&qid=1702601553&refinements=p_72%3A419117031&rnid=419116031&sprefix=usb+wi-fi+adapter+for+linux+and+windows%2Caps%2C71&sr=8-3
+ 1) To me the answer is get a new wireless card or a **USB wireless connector**.  or **USB Wi-Fi Adapter**  oer **Wireless USB adapter**  ,
+  **Required Linux  Kernel version 2.6.18 to approx  4.4.3**
+
+UBUNTU RELEASE	| ARCH	 | KERNEL VERSION
+**Ubuntu 14.04 LTS	| 64-bit x86 | 	4.4 (HWE)**
+Ubuntu 22.04 LTS	| 64-bit x86	| 6.2 (HWE)
+
+
+
+
+
+
+ 
+ 3)    example device link which is compatible with Windows, Linux & MAC OS :
+
+Netherlnad link: for support **Windows, Linux , Mac** -- **150 Mbp**s  -- Product TP-Link 150Mbps WiFi USB Adapter, Support System - Windows 11/10/8.1/8/7/XP, Mac OS 10.15 and earlier, Linux (TL-WN725N):
+
+a) https://www.amazon.nl/-/en/TP-Link-150Mbps-Adapter-Support-System/dp/B008IFXQFU/ref=cm_cr_arp_d_product_top?ie=UTF8&th=1
+b) 
+
+https://www.amazon.de/-/en/TP-Link-TL-WN823N-300Mbit-installation-compatible/dp/B0088TKTY2/ref=sr_1_3?crid=3RRKYLOJQ7CKF&keywords=USB+Wi-Fi+Adapter+for+linux+and+windows&qid=1702601553&refinements=p_72%3A419117031&rnid=419116031&sprefix=usb+wi-fi+adapter+for+linux+and+windows%2Caps%2C71&sr=8-3
+
+ 5) From mediamakrt prdouct: "ASUS USB-N10 NANO"  --compatiblw wiht linux , mac and windows:
+    https://www.mediamarkt.nl/nl/product/_asus-usb-n10-nano-1722882.html
     
- 2)  --updating the driver in device manager --**Intel driver to the Microsoft driver
+    
+ 6)  --updating the driver in device manager --**Intel driver to the Microsoft driver
    Uninstall / reinstall the wi-fi adapter by following this procedure:            
             https://www.drivereasy.com/knowledge/how-to-reinstall-wi-fi-driver-on-windows-10-easily/ 
  
@@ -41,7 +65,8 @@ Best thing is to:
 
 3) https://answers.microsoft.com/en-us/windows/forum/all/cannot-see-own-wireless-network-but-can-see-others/ae835a08-59a6-4aaa-830c-87a1dab5761b?page=3
 
-4) The solution to the first problem is to go to device manager - network adapters - TP-Link...**Adapter - Properties - Power Management, and turning off the "allow this device to be turned off to save power"**or whatever similar. I have no idea why such a braindead feature is featured on windows, why would I ever want to turn off my little USB internet dongle to save power???
+4) The solution to the first problem is to go to device manager - Network adapters - TP-Link...**Adapter - Properties - Power Management, and turning off the "allow this device to be turned off to save power"**or whatever similar. I have no idea why such a braindead feature is featured on windows, why would I ever want to turn off my little USB internet dongle to save power???
+5) The solution to the second problem was drivers. I tried updating my network and product drivers for like 5 times with no effect. The solution apparently was to update some g**eneric Intel drivers that windows automatically found for me.** I had no idea this would work but was pleasantly surprised, the product works great now!
 
 3) I turned on 802-11d and "lo
 4) I turned on 802.11d in the network adapter.
