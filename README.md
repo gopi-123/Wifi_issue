@@ -243,3 +243,40 @@ With these settings, I had been able topter on Linux. A long-term test will show
 
 
 **https://community.tp-link.com/en/home/forum/topic/248212**
+
+Solution: 
+**https://community.tp-link.com/en/home/forum/topic/208022**
+
+
+Model: Adapter  
+Hardware Version:
+Firmware Version:
+I Bought TP-Link AC1300 Mini-Wireless MU-MIMO USB Adapter Archer T3U.
+
+ 
+
+I know there is no official support for Ubuntu 20.04 LTS. Can any body help me to make it work with my Ubuntu 20.04
+
+Solution Explaination:
+
+I had the same problem, check out Jags solution on Ask Ubuntu under Proper Way of Installing Wifi Drivers.
+
+For convenience, I'll repost it here, because I can't seem to attach the link, but I take no credit for the following solution or the github repo. Make sure the adapter is unplugged, and tether to a phone or connect to ethernet. In terminal, do:
+
+ 
+
+ 
+git clone https://github.com/cilynx/rtl88x2bu.git
+cd rtl88x2bu
+VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
+sudo rsync -rvhP ./ /usr/src/rtl88x2bu-${VER}
+sudo dkms add -m rtl88x2bu -v ${VER}
+sudo dkms build -m rtl88x2bu -v ${VER}
+sudo dkms install -m rtl88x2bu -v ${VER}
+sudo modprobe 88x2bu
+ 
+
+Hope this helped and cheers,
+
+Monkey D. Luffy
+
