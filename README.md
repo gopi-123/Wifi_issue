@@ -238,3 +238,8 @@ rtt min/avg/max/mdev = 1,965/3,088/11,641/1,424 ms
 
 With these settings, I had been able topter on Linux. A long-term test will show how well it performs and if necessary I will note this again in the review.
 
+
+******
+
+
+**https://community.tp-link.com/en/home/forum/topic/248212**
