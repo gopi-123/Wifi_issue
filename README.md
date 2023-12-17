@@ -25,6 +25,10 @@ https://answers.microsoft.com/en-us/windows/forum/all/cannot-see-own-wireless-ne
 
 https://askubuntu.com/questions/645220/unable-to-connect-wifi-ubuntu-14-04-lts-hp-pavilion-network-driver-rtl8723be
 
+**Google search : rtl8723be support ubuntu 14.04 download**
+
+https://www.google.de/search?q=rtl8723be+support+ubuntu+14.04+download&sca_esv=591570470&ei=6Ud-ZZSGItCC9u8P-tKJ2Ak&oq=RTL8723BE+support+ubuntu+14.04&gs_lp=Egxnd3Mtd2l6LXNlcnAiHlJUTDg3MjNCRSBzdXBwb3J0IHVidW50dSAxNC4wNCoCCAAyBRAhGKABMgUQIRigAUihgwFQAFjlbnAAeAGQAQCYAYEBoAHxCqoBBDIxLjG4AQPIAQD4AQL4AQHCAgUQABiABMICBhAAGBYYHsICBxAhGKABGAriAwQYACBBiAYB&sclient=gws-wiz-serp
+
 
 ** Solve wifi issues **:
 
