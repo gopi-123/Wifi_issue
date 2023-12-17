@@ -36,8 +36,7 @@ UBUNTU RELEASE	| ARCH	 | KERNEL VERSION
 **Ubuntu 14.04 LTS	| 64-bit x86 | 	4.4 (HWE)**
 Ubuntu 22.04 LTS	| 64-bit x86	| 6.2 (HWE)
 
-
-
+I used it for a new laptop that I installed Linux Mint operating system on. The Wifi card was an Intel 6E AX211 160Mhz. I used the dongle to establish an internet connection as most modern laptops don't have a rj45 socket on them these days. i then could download all the **updates and the latest Linux kernel** and then after a reboot the Wifi was working perfectly. 
 
 
 
