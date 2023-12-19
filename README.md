@@ -33,6 +33,8 @@ https://www.google.de/search?q=rtl8723be+support+ubuntu+14.04+download&sca_esv=5
 
 Video Solve (Solve & Fix Realtek RTL8723BE Weak WIFI Signal Problem in Ubuntu): **https://www.youtube.com/watch?v=DPFKYYOlydQ**
 
+https://askubuntu.com/questions/847392/wlan-rtl8723be-frequently-disconnects
+
 
 ** Solve wifi issues **:
 
