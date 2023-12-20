@@ -294,3 +294,7 @@ Hope this helped and cheers,
 
 Monkey D. Luffy
 
+
+
+**Bluetooth issue:**
+https://askubuntu.com/questions/474839/the-bluetooth-is-disabled-on-ubuntu-14-04
