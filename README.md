@@ -277,17 +277,26 @@ I had the same problem, check out Jags solution on Ask Ubuntu under Proper Way o
 
 For convenience, I'll repost it here, because I can't seem to attach the link, but I take no credit for the following solution or the github repo. Make sure the adapter is unplugged, and tether to a phone or connect to ethernet. In terminal, do:
 
- 
+------ 
 
- 
+
 git clone https://github.com/cilynx/rtl88x2bu.git
+
 cd rtl88x2bu
+
 VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
+
 sudo rsync -rvhP ./ /usr/src/rtl88x2bu-${VER}
+
 sudo dkms add -m rtl88x2bu -v ${VER}
+
 sudo dkms build -m rtl88x2bu -v ${VER}
+
 sudo dkms install -m rtl88x2bu -v ${VER}
+
 sudo modprobe 88x2bu
+
+----------
  
 
 Hope this helped and cheers,
