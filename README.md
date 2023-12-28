@@ -321,4 +321,7 @@ https://askubuntu.com/questions/474839/the-bluetooth-is-disabled-on-ubuntu-14-04
 
 https://youtu.be/S_87-35LPKY
 
+Github Link: https://github.com/lwfinger/rtl8188eu
+
+
 
