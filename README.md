@@ -38,6 +38,8 @@ https://askubuntu.com/questions/847392/wlan-rtl8723be-frequently-disconnects
 **Highest voted answer:**
 https://askubuntu.com/questions/635625/how-do-i-get-a-realtek-rtl8723be-wireless-card-to-work?noredirect=1&lq=1
 
+New problem : tplink wn725n wifi adapter ubuntu 14.04
+
 
 
 ** Solve wifi issues **:
