@@ -40,6 +40,10 @@ https://askubuntu.com/questions/635625/how-do-i-get-a-realtek-rtl8723be-wireless
 
 New problem : tplink wn725n wifi adapter ubuntu 14.04
 
+How to install drivers for TP-Link V3 TL-WN725N Wi-Fi USB adapter on Ubuntu 18.04 LTS | Techie VISH
+
+https://youtu.be/S_87-35LPKY
+
 
 
 ** Solve wifi issues **:
@@ -309,3 +313,12 @@ Monkey D. Luffy
 
 **Bluetooth issue:**
 https://askubuntu.com/questions/474839/the-bluetooth-is-disabled-on-ubuntu-14-04
+
+
+**New problem : tplink wn725n wifi adapter ubuntu 14.04**
+
+### How to install drivers for TP-Link V3 TL-WN725N Wi-Fi USB adapter on Ubuntu 18.04 LTS | Techie VISH ###
+
+https://youtu.be/S_87-35LPKY
+
+
