@@ -9,7 +9,11 @@ Issue with **Wireleass LAN Adapter -- "Realtek RTL8723BE 802.11 bgn Wi-Fi Adapte
 
  https://support.hp.com/in-en/drivers/laptops
  
- 
+ ---To Do:
+
+ **google: Install TP-LINK AC1300 in ubuntu 14.04 kernel 4.4**
+
+ ##########
 Problem:
 Cannot see own wireless network but can see others around me
 
