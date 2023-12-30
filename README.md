@@ -327,5 +327,35 @@ https://youtu.be/FNEB1JwkAG4
 
 Github Link: https://github.com/lwfinger/rtl8188eu
 
+###################################
 
+https://www.quora.com/Can-I-connect-to-5GHz-while-my-laptop-is-2-4GHz
+
+
+**How to find out if your router supports 5 GHz frequency band?**
+
+Having said the things that you need to consider before choosing the best frequency band, you need to know if your router supports 5 GHz band itself or not. Most of the home Wi-Fi routers (usually old models and cheaper ones) support only one frequency band; 2.4 GHz. You have got no choice.
+
+But, if your router is of newer models and supports dual bands, then, you will notice two Radios. Each of the radios are supposed to operate on frequency bands 2.4 GHz and 5 GHz separately.
+
+Or, you can just check the technical specifications of the Wi-Fi router model you are using or which you want to upgrade to. 
+- If the specifications list includes the wireless standards like **802.11a or 802.11ac, it definitely supports 5 GHz**, while if the standards are
+- **802.11b/g/n** --2.4GHZ, then, it will not. However, the standard 802.11n might have optional feature to support 5 GHz as well.
+
+**How to find out if your device supports 5 GHz frequency band?**
+
+Being tempted by the merits of 5 GHz frequency band and before jumping to take a decision to enable 5 GHz frequency band in your Wi-Fi router, you must make sure that the devices you use support the same frequency.
+
+Let's check how to find out if your device supports 5 GHz frequency or not.
+
+The primary thing would be to check the technical specifications of your mobile or laptop model. It should be clearly mentioned there if it is 5 GHz compatible or not.
+In your laptop, you can check by executing a command. 
+- **Press 'Windows + R' and type 'cmd'.**
+- In the command prompt, type **'netsh wlan show drivers'**.
+-  In the **'Radio Types Supported'** section, check the wireless standards supported by your laptop. Same thing again, if it's 802.11a or ac, it is compatible. Else, it is not.
+-  Also, another easy method would be to check the **'Network Adapters' part in 'Device Manager'**. There the standards and the frequency band supported should be clearly mentioned.**
+Lastly, you can simple test by trying to connect to a Wi-Fi network which is operating in 5 GHz frequency band. If it connects, then your device is compatible. Else, it is not.
+But, most of the latest mobile phones, laptops, tablets or iPads must support both frequency bands. The thing you must be more concerned about is your router.
+
+If you have come this far, then, you must have had the brief knowledge about frequency bands in Wi-Fi router, and when should you use 5 GHz band. Now, the choice is yours.
 
