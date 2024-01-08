@@ -34,3 +34,31 @@ There are several online platforms where you can practice and exercise SQL queri
    - Codecademy offers an interactive SQL course that covers topics from basic queries to more advanced concepts. While some features are behind a paywall, there is a free version that allows you to practice essential SQL skills.
 
 These platforms offer a mix of theoretical learning and practical exercises. Choose the one that aligns with your learning preferences and provides the level of challenge you are looking for.
+
+
+
+############
+
+If you're looking for easy SQL questions on LeetCode to practice and improve your skills, you can find a dedicated section for SQL problems on the LeetCode website. Here's how you can access it:
+
+1. **Visit LeetCode:**
+   Go to the LeetCode website: [LeetCode SQL](https://leetcode.com/problemset/database/)
+
+2. **Filter by Difficulty:**
+   - On the SQL problem page, you can filter questions based on difficulty level.
+   - Click on the "Difficulty" dropdown menu and select "Easy."
+
+3. **Choose a Problem:**
+   - Browse through the list of easy SQL problems.
+   - Click on a problem title to view the details and attempt the question.
+
+4. **Submit and Discuss:**
+   - Write your SQL solution in the provided editor.
+   - Submit your solution to see if it passes the test cases.
+   - Explore the "Discuss" tab to see solutions and discussions from other users.
+
+LeetCode provides a platform where you can practice coding challenges, and the community often shares various approaches and solutions for each problem. Starting with easy-level questions is a good way to build a solid foundation before progressing to more challenging problems.
+
+**Remember to read and understand the problem statements thoroughly, and try to come up with efficient and optimized SQL queries. Practicing regularly and reviewing solutions from the community can significantly improve your SQL skills.**
+
+
