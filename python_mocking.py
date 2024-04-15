@@ -193,3 +193,57 @@ In this corrected version:
 - We then verify that the function under test processes each SP correctly and generates the expected result.
 
 
+################ Solution 3 ##############
+
+User
+could we mock whole function output by ignoring  code section within the functon and focus on just output
+
+Yes, you can mock the entire output of a function without executing its internal code sections. This approach allows you to isolate the unit test to focus solely on the return value of the function without considering its internal implementation details.
+
+Here's how you can mock the entire output of the `get_sp_list_with_release_date` function without executing its internal code sections:
+
+```python
+import unittest
+from unittest.mock import patch
+from my_module import get_sp_list_with_release_date
+
+class TestGetSPListWithReleaseDate(unittest.TestCase):
+    @patch('my_module.es')  # Mock the Elasticsearch client
+    def test_get_sp_list_with_release_date(self, mock_es):
+        # Define mock return value for the function output
+        mock_return_value = [
+            {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+            {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+        ]
+
+        # Configure the mock Elasticsearch client to not execute internal code
+        mock_es.search.return_value = None
+
+        # Call the function under test
+        sp_list = get_sp_list_with_release_date(
+            sp_list=['SP34', 'SP33'],
+            index_service_packs='test_index',
+            release_id='7.4.0.b',
+            machine_type='World-Wide'
+        )
+
+        # Assert that the result matches the expected mock return value
+        self.assertEqual(sp_list, mock_return_value)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+In this example:
+
+- We mock the Elasticsearch client (`es`) using the `@patch` decorator.
+- We define a mock return value for the entire output of the `get_sp_list_with_release_date` function.
+- We configure the mock Elasticsearch client to return `None`, effectively bypassing the execution of the function's internal code.
+- We call the function under test and assert that its output matches the expected mock return value.
+
+By mocking the entire output of the function, we focus solely on the function's behavior as perceived from the outside, without considering its internal implementation details. Adjust the mock return value and test case as needed for your specific use case.
+
+
+################
+
+
