@@ -295,6 +295,158 @@ This approach simplifies the test case by directly mocking the entire function, 
 
 
 
-###################################
+################################### solution 5 below  VVV BEsT#######################
 
+
+
+You're correct; my apologies for the oversight. Using `@patch` decorator in this way doesn't prevent the actual function from being called. It simply replaces the function with a MagicMock object, but if you don't specify a return value, the function will still execute its original code.
+
+To fully mock the function and prevent its execution, you can use `@patch` to directly replace the function with a MagicMock object and then specify its return value. Here's the corrected approach:
+
+```python
+import unittest
+from unittest.mock import patch, MagicMock
+from my_module import get_sp_list_with_release_date
+
+class TestGetSPListWithReleaseDate(unittest.TestCase):
+    @patch('my_module.get_sp_list_with_release_date', return_value=[
+        {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+        {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+    ])
+    def test_get_sp_list_with_release_date(self, mock_function):
+        # Call the function under test (you can pass any arguments if needed)
+        sp_list = get_sp_list_with_release_date(
+            sp_list=['SP34', 'SP33'],
+            index_service_packs='test_index',
+            release_id='7.4.0.b',
+            machine_type='World-Wide'
+        )
+
+        # Assert that the result matches the expected mock return value
+        self.assertEqual(sp_list, [
+            {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+            {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+        ])
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+In this corrected approach:
+
+- We directly use `@patch` to replace `get_sp_list_with_release_date` with a MagicMock object and specify its return value.
+- By providing a return value directly in the `@patch` decorator, we ensure that the function is not executed, and instead, the specified return value is returned when the function is called.
+- This approach effectively mocks the entire function without executing its internal code.
+
+
+##################
+The error you're encountering, `AttributeError: module 'elasticsearch' has no attribute 'search'`, suggests that there's an attempt to access the `search` attribute within the `elasticsearch` module, but it doesn't exist.
+
+This error typically occurs when there's a mismatch between the attribute being accessed and the actual structure of the module or object being patched.
+
+In your case, it seems like you're attempting to mock the `elasticsearch` module itself, but the `search` attribute is not present in it. Instead, you likely need to mock an object or method within the `elasticsearch` module that corresponds to the `search` operation, such as an Elasticsearch client object or its `search` method.
+
+Here's how you can correct it:
+
+```python
+import unittest
+from unittest.mock import patch
+from my_module import get_sp_list_with_release_date
+
+class TestGetSPListWithReleaseDate(unittest.TestCase):
+    @patch('my_module.get_sp_list_with_release_date')
+    def test_get_sp_list_with_release_date(self, mock_function):
+        # Define mock return value for the entire function
+        mock_return_value = [
+            {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+            {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+        ]
+
+        # Configure the mock function to return the mock return value
+        mock_function.return_value = mock_return_value
+
+        # Call the function under test (you can pass any arguments if needed)
+        sp_list = get_sp_list_with_release_date(
+            sp_list=['SP34', 'SP33'],
+            index_service_packs='test_index',
+            release_id='7.4.0.b',
+            machine_type='World-Wide'
+        )
+
+        # Assert that the result matches the expected mock return value
+        self.assertEqual(sp_list, mock_return_value)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+In this example, the `@patch` decorator is applied to `my_module.get_sp_list_with_release_date`, and the function is replaced with a MagicMock object. The error you encountered likely stems from the attempt to patch `elasticsearch` directly, which doesn't contain a `search` attribute. Adjust the patching target to the appropriate object or method within your module.
+
+--------------############## Solution for Elastic search ############### -------
+
+
+To properly mock the Elasticsearch client and its `search` method, you need to understand where the `elasticsearch` module is used within your `my_module` code. Assuming that the `search` method is called on an Elasticsearch client object within your `my_module`, you should patch the Elasticsearch client object instead of the entire `elasticsearch` module.
+
+Here's a general approach:
+
+```python
+import unittest
+from unittest.mock import patch, MagicMock
+from my_module import get_sp_list_with_release_date
+
+class TestGetSPListWithReleaseDate(unittest.TestCase):
+    @patch('my_module.elasticsearch.Elasticsearch')  # Mock the Elasticsearch client
+    def test_get_sp_list_with_release_date(self, mock_es):
+        # Create a MagicMock instance to represent the Elasticsearch client object
+        mock_es_instance = MagicMock()
+
+        # Define the mock return value for the Elasticsearch search method
+        mock_search_response = {
+            "hits": {
+                "hits": [
+                    {"_source": {"released_flag": False, "released_converted": "wkyyww.d"}},
+                    {"_source": {"released_flag": True, "released_converted": "wk2412.4"}}
+                ]
+            }
+        }
+
+        # Configure the mock Elasticsearch search method to return the mock response
+        mock_es_instance.search.return_value = mock_search_response
+
+        # Configure the mock Elasticsearch client to return the MagicMock instance
+        mock_es.return_value = mock_es_instance
+
+        # Call the function under test
+        sp_list = get_sp_list_with_release_date(
+            sp_list=['SP34', 'SP33'],
+            index_service_packs='test_index',
+            release_id='7.4.0.b',
+            machine_type='World-Wide'
+        )
+
+        # Assert that the result matches the expected mock return value
+        expected_result = [
+            {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+            {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+        ]
+        self.assertEqual(sp_list, expected_result)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+In this example:
+
+- We use `@patch` to mock the `Elasticsearch` class within the `elasticsearch` module, which is assumed to be imported and used within `my_module`.
+- We create a MagicMock instance to represent the Elasticsearch client object.
+- We define a mock return value for the Elasticsearch `search` method and configure it to return the mock response.
+- We configure the mocked Elasticsearch client to return the MagicMock instance when instantiated.
+- Finally, we call the function under test (`get_sp_list_with_release_date`) and assert that its output matches the expected value.
+
+Adjust the patching target (`'my_module.elasticsearch.Elasticsearch'`) based on how the Elasticsearch client is imported and used within your `my_module` code.
+
+
+
+
+###################33
 
