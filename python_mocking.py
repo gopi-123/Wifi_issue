@@ -488,4 +488,99 @@ This ensures that the original add function is completely replaced by the MagicM
 
 """
 
-#################
+#################  BEST @ FINAL SOLTUION  ############
+
+
+
+FInal Soltuion
+
+
+import unittest
+from unittest.mock import patch, MagicMock
+import my_module
+
+class TestGetSPListWithReleaseDate(unittest.TestCase):
+    @patch('my_module.get_sp_list_with_release_date')  # Patch the entire function
+    def test_get_sp_list_with_release_date(self, mock_function):
+        # Define the mock return value for the function
+        mock_return_value = [
+            {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+            {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+        ]
+
+        # Configure the mock function to return the mock return value
+        mock_function.return_value = mock_return_value
+
+        # Call the test function that uses get_sp_list_with_release_date
+        result = my_module.get_sp_list_with_release_date(
+            sp_list=['SP34', 'SP33'],
+            index_service_packs='test_index',
+            release_id='7.4.0.b',
+            machine_type='World-Wide'
+        )
+
+        print("Hello output")
+        # Assert that the result matches the expected mock return value
+        self.assertEqual(result, mock_return_value)
+
+if __name__ == '__main__':
+    unittest.main()
+
+In this example:
+
+We use the @patch decorator to patch the my_module.get_sp_list_with_release_date function.
+We define a mock return value for the function.
+We configure the mock_function to return the mock return value.
+Inside the test case, when some_function_that_uses_get_sp_list_with_release_date is called, the patched get_sp_list_with_release_date function returns the MagicMock object instead of executing the actual implementation.
+We then assert that the result of some_function_that_uses_get_sp_list_with_release_date matches the expected mock return value.
+By patching the entire get_sp_list_with_release_date function with a MagicMock object in this way, you can avoid executing its internal logic and instead return a mock value for testing purposes.
+
+
+
+############ 
+
+
+
+import unittest
+from unittest.mock import patch, MagicMock
+import my_module
+
+class TestGetSPListWithReleaseDate(unittest.TestCase):
+    @patch('my_module.get_sp_list_with_release_date', return_value=[
+        {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+        {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+    ])  # Patch the entire function with MagicMock return value
+    def test_get_sp_list_with_release_date(self, mock_function):
+        # Call the test function that uses get_sp_list_with_release_date
+        result = my_module.get_sp_list_with_release_date(
+            sp_list=['SP34', 'SP33'],
+            index_service_packs='test_index',
+            release_id='7.4.0.b',
+            machine_type='World-Wide'
+        )
+
+        # Assert that the result matches the expected mock return value
+        expected_result = [
+            {"SP34": {"released": False, "release_date": "wkyyww.d (False)"}},
+            {"SP33": {"released": True, "release_date": "wk2412.4 (True)"}}
+        ]
+        self.assertEqual(result, expected_result)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+'''
+In this example:
+
+We use the @patch decorator to patch the my_module.get_sp_list_with_release_date function.
+We set the return_value attribute of the MagicMock object directly in the patch decorator to the desired mock return value.
+Inside the test case, when some_function_that_uses_get_sp_list_with_release_date is called, the patched get_sp_list_with_release_date function returns the MagicMock object with the specified return value.
+We then assert that the result of some_function_that_uses_get_sp_list_with_release_date matches the expected mock return value.
+By setting the return_value attribute of the MagicMock object directly in the patch decorator, you can avoid executing the actual implementation of the function and instead return a mock value for testing purposes.
+
+'''
+###############
+
+
+    
