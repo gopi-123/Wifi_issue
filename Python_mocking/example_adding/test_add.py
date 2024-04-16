@@ -25,3 +25,36 @@ class TestAddFunction(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+################# OR ################
+
+
+import unittest
+from unittest.mock import patch
+import my_module  # Import the module containing the add function
+
+class TestAddFunction(unittest.TestCase):
+    @patch('my_module.add', return_value=5)
+    def test_add_function(self, mock_add):
+        # Call the add function (the patched version, not the actual add function)
+        result = my_module.add(2, 3)
+
+        # Assert that the result matches the expected mock return value
+        self.assertEqual(result, 5)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+################## OR ###########
+
+from unittest.mock import MagicMock
+
+# Create a MagicMock object with a return value
+mock_function = MagicMock(return_value=5)
+
+# Use the MagicMock object in tests
+result = mock_function(2, 3)
+assert result == 5
