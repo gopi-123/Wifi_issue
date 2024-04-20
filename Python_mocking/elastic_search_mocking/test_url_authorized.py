@@ -1,3 +1,8 @@
+Can not authorize in unittest
+
+# 10 mins
+#https://stackoverflow.com/questions/27649734/can-not-authorize-in-unittest?rq=3
+
 
 
 # Example of authroized and unauthorized access
