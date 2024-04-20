@@ -2,6 +2,57 @@
 from elasticsearch import Elasticsearch, exceptions
 import os
 
+
+@api_view(["GET"])
+def fpas_query_v2(request, release_id="", machine_type=""):
+    try:
+        return JsonResponse(
+            get_fpas_json_v2(release_id, machine_type)
+        )
+    except Exception as e:
+        print("#### -->Error response",str(e))
+        return JsonResponse({"Error": str(e)})
+        
+
+def get_fpas_json_v2(release_id, machine_type):
+    body = {}
+    index_service_packs = "fco-on-demand-service-packs"
+    res = {}
+    ret = {}
+
+    es = Elasticsearch([os.environ["ES_HOST"]])    
+    
+    body = {
+        "size": 0,
+        "aggs": {"distinct": {"terms": {"field": "name", "size": 10000}}},
+        "query": {
+            "bool": {
+                "must": [
+                    {"match": {"product": "AT"}},
+                    {"match": {"release": release_id}},
+                    {"match": {"machine_type.keyword": machine_type}},
+                ]
+            }
+        },
+    }
+
+    res = es.search(index=index_service_packs, body=body)
+    ret["service_packs"] = []
+    
+    for bucket in (
+        res.get("aggregations", {}).get("distinct", {}).get("buckets", [])
+    ):
+        ret["service_packs"].append(bucket.get("key"))
+
+    ret["service_packs"].sort(reverse=True)
+
+    # Call a Function and create a service pack list having dictionary of service packs number having values as 'released' flags and 'released dates'
+    ret["service_packs"] = get_sp_list_with_release_date(
+        ret["service_packs"], index_service_packs, release_id, machine_type
+    )
+        
+    return ret
+
 def get_sp_list_with_release_date(
     sp_list, index_service_packs, release_id, machine_type
 ):
@@ -103,3 +154,5 @@ def get_fpas_json_v2(release_id, machine_type):
     )
         
     return ret
+
+
