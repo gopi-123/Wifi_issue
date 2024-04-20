@@ -39,6 +39,22 @@ class UrlAccessTest(TestCase):
         # Assert that the response status code is 403 Forbidden for unauthorized access
         self.assertEqual(response.status_code, 403)
 
+    @patch('api.views_v2.fpas_query_v2')  # Replace 'your_app' with the actual name of your Django app
+    def test_authorized_access(self, mock_fpas_query_v2):
+        # Mock the return value of the view function to simulate authorized access
+        #mock_fpas_query_v2.return_value = HttpResponse(status=200)
+        mock_fpas_query_v2.return_value = 200
+
+        print(f"#### mock_fpas_query_v2.return_value{mock_fpas_query_v2.return_value}")
+        release_id = "7.4.0.b"
+        machine_type =  "World-Wide"
+
+        # Make a GET request to the URL
+        response = self.client.get(reverse('fpas_query_v2', args=[release_id, machine_type]))
+
+        print(f"response:{response}")
+        
+
     def test_authorized_access(self):
         # Simulate authenticated access by logging in a user
         self.client.login(username='test_user', password='test_password')
