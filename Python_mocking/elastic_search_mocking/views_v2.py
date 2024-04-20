@@ -1,5 +1,7 @@
 
 from elasticsearch import Elasticsearch, exceptions
+from django.http import JsonResponse
+
 import os
 
 
