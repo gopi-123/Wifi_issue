@@ -50,6 +50,9 @@ def get_sp_list_with_release_date(
 #######  Unit test below ##################3
 ```python
 ####################### Solution 5 ################3
+I see, my apologies for misunderstanding your question. Let's adjust the mock Elasticsearch response to include the `released` field with the appropriate value. Here's the corrected version of the unit test:
+
+```python
 import unittest
 from unittest.mock import patch
 from your_module import get_sp_list_with_release_date
@@ -61,7 +64,7 @@ class TestGetSpListWithReleaseDate(unittest.TestCase):
         mock_search_result = {
             "hits": {
                 "hits": [
-                    {"_source": {"released_flag": True, "released_converted": "2024-03-21"}, "_id": "1"}
+                    {"_source": {"released_flag": True, "released_converted": "wk2412.4", "released": "2024-03-21"}, "_id": "1"}
                 ]
             }
         }
@@ -77,12 +80,20 @@ class TestGetSpListWithReleaseDate(unittest.TestCase):
 
         # Assert the results
         expected_result = [
-            {'SP33': {'released': True, 'release_date': '2024-03-21 (True)'}}
+            {'SP33': {'released': True, 'release_date': 'wk2412.4 (2024-03-21)'}}
         ]
         self.assertEqual(result, expected_result)
 
 if __name__ == '__main__':
     unittest.main()
+```
+
+In this corrected version:
+- We include the `released` field in the Elasticsearch response with the appropriate value.
+- The `released_converted` field is set to "wk2412.4" and the `released` field is set to "2024-03-21" in the mock response.
+- We adjust the expected result to match the updated release date information.
+
+Now the unit test should pass with the corrected mock Elasticsearch response. Let me know if you need further assistance!
 ```
 
 In this test case:
