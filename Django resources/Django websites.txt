@@ -1,4 +1,63 @@
 
+
+A Comprehensive Guide to Testing Django Applications
+
+https://l.facebook.com/l.php?u=https%3A%2F%2Fatharvashah.netlify.app%2Fposts%2Ftech%2Fdjango-testing-guide%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR3jTgom5MsO99YPs0Ue2S673Yq6MPvINQd5uBCYa09P8lcVr6U_gkrTXyo_aem_AYbsCk_NEB7ZVIpjDdDoxXhUzYB9X010u5FX4OJl9WbA211nQA-lHgHWkhN40jvsyoFOy9Z16PcpNgPJ3PURE_-F&h=AT3kYg8zMiT0b978J3gP8a_iA6FKNxWrD1p98Il9BCZK04b8S2e_Afr0JTuarIDNCFvSTP4vHbK3R7_z1qchpU5j7IVmphJKtdxM_wNmLOTJdKoKqmNH_xlWsjmfOdfPx0iX&__tn__=-UK-R&c[0]=AT19-M1njgC_447PU2qmQyb4_-pLEbNnSvjLY_LVIEedeLmyPKI4d5BZ27d4_1Ao4j6w-F2EMHXo9SYTc5swacwOHhz4pgCH2wzUjGkmJytkehFplZjhTuRhQZC_hEYYPepq0l4ED7Pdlp-Gi_YF7p2-Z1C-rzl7iwnggWXUZt3gqzBUQxrxKb8n8sWJFihNG19py18NFeqdQeYR0CF-2p6p8yLTk9dH_sdYJ9EHsczbZqbe
+
+
+https://atharvashah.netlify.app/posts/tech/django-testing-guide/?fbclid=IwZXh0bgNhZW0CMTEAAR0ZPAhd5E88zQw9hA6spObGMzd9Z8W1wdC1i9l2w6K2AHqSREJ1M4zrOZ8_aem_AYbRFSVjzKPDKRiCqENpeBGGqikuqS_OQKZxOp40HDtNYpIm51V49-kr2D5kFN0VDLZOoLdl7-eWiV68PE9sqslf
+
+
+
+Django Learning Resources
+DERRICK KEARNEY·FRIDAY 13 JUNE 2014·
+I strongly suggest using virtualenv to install and manage Django installs. Jeff Knupp, and Michael Herman, both advise to use virtualenv, along with Daniel Greenfeld and Audrey Roy in their Two Scoops of Django: Best Practices For Django 1.11. The official tutorial can be a bit painful but you need to do it as it teaches critical fundamentals.
+* VirtualEnv and Wrapper - Install and Usage guide, http://docs.python-guide.org/en/latest/dev/virtualenvs/
+All current editions of Python 3 come with venv, so there is no requirement to install a 3rd party package unless you want to, see Creation of virtual environments
+Overview of Web Frameworks, older but still valid
+http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/
+Free Options - Print and Video
+The official Django site - https://docs.djangoproject.com/en/stable/intro/tutorial01/
+MSN Learn web development https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+The Django Girls Tutorial a community project started by Ola Sitarska and Ola Sendecka, very detailed and kept up to date by the community: http://tutorial.djangogirls.org/
+Harry Percival Obey the Testing Goat
+The revamped DjangoBook website updated to 2.0(by Nigel George) - http://djangobook.com
+Try DJANGO TUTORIAL Series (v1.11) // Learn Django Version 1.11 Video via YouTube, from CodingEntrepreneurs with Justin Mitchell
+Python Django Tutorial: Full-Featured Web App Part 1 - Corey Schafer https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
+Dr Chuck's Django for Everyone in course format,https://www.dj4e.com/ thanks to David Sulaberidze for pointing this out.
+JustDjango (mixed - free & paid) https://www.youtube.com/channel/UCRM1gWNTDx0SHIqUJygD-kQ/featured & https://www.justdjango.com
+Vitor Freitas' Beginner's Guide https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/ (Even though this is a bit older, it is still an excellent resource, just be aware that there are differences that need updating
+Microsoft - Creating data-driven web applications with Django - https://www.youtube.com/watch?v=gDSp0LAs208
+ https://youtube.com/c/veryacademy
+Very Academy -Django Crash Course - https://youtu.be/IHTP8-KskcQ
+Class Based Views
+Django Docs:https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/
+Class-Based Views vs. Function-Based Views -https://simpleisbetterthancomplex.com/article/2017/03/21/class-based-views-vs-function-based-views.html
+Classy CBV: Django Class-Based-View Inspector - https://ccbv.co.uk/
+A comprehensive Django CBV guide-https://spapas.github.io/2018/03/19/comprehensive-django-cbv-guide/
+Diagram Based Explanation`
+of CBVs https://www.brennantymrak.com/articles/django-class-based-views-diagrams
+Good Resources Site: http://www.fullstackpython.com/django.html
+Installation on Windows:
+https://www.youtube.com/playlist?list=PLEsfXFp6DpzSH9ylikCRyki_Bi6avmltQ
+Group Recommended Guides for Deployment can be found here =>https://www.facebook.com/notes/django-python-web-framework/django-deployment/792337874150794
+
+Paid Options
+Daniel Roy Greenfeld and Audrey Roy Greenfeld(members) -
+Django Crash Course (Covers Python 3.8 and Django 3.0)
+Two Scoops of Django 3.x: Best Practices for the Django Web Framework
+MichaelHerman(member), et al. Testdriven Courses
+Nigel George(member) Build a website with Django 3
+Justin Mitchel(member) very popular https://codingforentrepreneurs.com/, note he also has numerous free videos on YouTube
+William Vincent’s Django for Beginners(Django 3.1) https://djangoforbeginners.com/
+Leif Azzopardi and David MaxwellTango With Django 2: A beginner’s guide to web development with Django 2. http://leanpub.com/tangowithdjango2
+Antonio Melé Django3 - By Example
+Arun Ravindran Django Design Patterns and Best Practices 2nd edn
+Udemy offers a number of videos on Django and other related programming. Each course is a one time cost, and then unlimited access. Some courses are free to take. - https://www.udemy.com/
+https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/ is highly recommended
+Read the reviews of the course before taking it and make sure it is recent
+Reference
+Django Packages is a directory of reusable apps, sites, tools, and more for your Django projects. https://www.djangopackages.com/
 Django Learning Resources
 DERRICK KEARNEY·FRIDAY 13 JUNE 2014·
 I strongly suggest using virtualenv to install and manage Django installs. Jeff Knupp, and Michael Herman, both advise to use virtualenv, along with Daniel Greenfeld and Audrey Roy in their Two Scoops of Django: Best Practices For Django 1.11. The official tutorial can be a bit painful but you need to do it as it teaches critical fundamentals.
