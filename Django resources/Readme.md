@@ -238,3 +238,26 @@ Certainly! Here are some resources to learn about Django API testing and related
 By leveraging these resources, you can deepen your understanding of Django API testing and develop the skills necessary to write robust and reliable tests for your Django applications.
 
 
+#######
+
+ ** VS code extension to do refactoring or optimizing python code **
+ 
+Yes, there are several Visual Studio Code (VS Code) extensions available that can assist with refactoring and optimizing Python code. Here are a few popular ones:
+
+1. **Python Refactor**: This extension provides various refactorings for Python code, such as renaming symbols, extracting variables and methods, and organizing imports.
+   - Extension Marketplace: [Python Refactor](https://marketplace.visualstudio.com/items?itemName=trixnz.python-refactor)
+  
+2. **Sort Imports**: This extension automatically sorts Python import statements within your code to adhere to PEP 8 guidelines or custom configurations.
+   - Extension Marketplace: [Sort Imports](https://marketplace.visualstudio.com/items?itemName=pwwang.sort-lines)
+
+3. **Pylance**: Pylance is a language server for Python in VS Code that offers advanced code analysis features, including code refactoring suggestions.
+   - Extension Marketplace: [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+
+4. **autopep8**: Although not a dedicated refactoring extension, autopep8 is a VS Code extension that automatically formats Python code to conform to PEP 8 style guidelines. This can help optimize and clean up your code.
+   - Extension Marketplace: [autopep8](https://marketplace.visualstudio.com/items?itemName=himanoa.python-autopep8)
+
+5. **pylint**: Pylint is a popular Python static code analysis tool that can detect errors, enforce coding standards, and provide refactoring suggestions.
+   - Extension Marketplace: [pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylint)
+
+These extensions can help streamline your Python development workflow by providing tools for refactoring and optimizing your code directly within VS Code. You can install them from the VS Code Extensions Marketplace by searching for their names.
+
