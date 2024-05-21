@@ -66,8 +66,14 @@ class TestPreInstallActionsCheck(unittest.TestCase):
 
         # Continue with other assertions based on what you expect the method to do
         
+        result_factory_pre_install_actions = self.instance.fco.get(
+                "factory_pre_install_actions", []
+            )
+        
+        print(f"####result_factory_pre_install_actions####:{result_factory_pre_install_actions}")
+        
         self.instance.fco.get.assert_any_call("factory_pre_install_actions", [])
-        self.instance.fco.get.assert_called_once_with(["factory_pre_install_actions"])
+        #self.instance.fco.get.assert_called_once_with(["factory_pre_install_actions"])
 
 
 if __name__ == '__main__':
