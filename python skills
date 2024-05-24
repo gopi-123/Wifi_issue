@@ -1,4 +1,12 @@
 
+Vscode extensions:
+VS code
+Error lens
+
+Pylint 
+github actions tutorial
+
+
 
 Essential Skills for Python Developers
 
@@ -6,6 +14,25 @@ https://codeinstitute.net/nl/blog/python-career-paths/
 
 https://github.com/TheAlgorithms/Python
 
+++ VS code Extensions for python ++ 
+Error lens
+autoDocstring: VSCode Python Docstring Generator
+Black Formatter -Formatting support for Python files using the Black formatter.
+Pylint 
+github actions tutorial
+Pylint - Pylint extension for Visual Studio Code 
+Python - extension for Visual Studio Code
+Git Graph - extension for Visual Studio Code -View a Git Graph of your repository, and perform Git actions from the graph
+GitLens — Supercharge Git in VS Code -Visualize code authorship at a glance via Git blame annotations and CodeL
+isort -Import organization support for Python files using isort
+Jupyter - Jupyter notebook support
+Python Debugger - extension for Visual Studio Code
+SonarLint - Linter to detect & fix coding issues locally in JS/TS, Python, PHP, Java, C, C++, C#, Go, IaC. Use with SonarQ
+Thunder Client - Lightweight Rest API Client for VS Code
+TICS- TICS Visual Studio Code Extension (TIOBE Software B.V)
+WSL - Visual Studio Code WSL - Open any folder in the Windows Subsystem for Linux (WSL) and take advantage of Visual Studio Code's ful
+Pylance - A performant, feature-rich language server for Python in VS Code
+Jupyter Notebook Renderers - Renderers for Jupyter Notebooks in Visual Studio Code
 
 
 Python programmers should have a firm grasp of the language’s fundamental ideas, including data types, control structures, and functions. They ought to be able to produce orderly, reusable code. Additionally, they should be well-versed in software development concepts like design patterns and object-oriented programming.
